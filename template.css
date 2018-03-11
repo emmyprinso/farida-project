@@ -1,2 +1,17 @@
 body{
+	background-color:white;
+	color:black;
+}
+
+.linkFootNav{
+	background-color:black;
+	color:white;
+}
+
+footNav{
+	text-align:center;
+	position: absolute;
+	+transform(translate(-50px,-50px))
+	
+
 }
