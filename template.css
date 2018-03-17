@@ -1,6 +1,10 @@
+*{
+	margin:0;
+	padding:0;
+}
 body{
 	background-color:white;
-	/* color:black; */
+	font-family: sans-serif;
 }
 
 .headerArrange{ //arrange the header section
@@ -19,11 +23,36 @@ footNav{
 	
 }
 
+//Setting up the header section
+#headerSection{
+	background-color: white;
+	width: 100%;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-right:10%;
+	padding-left:10%;
+}
+
+#headerAlign{
+	width:80%;
+	background-color:green;
+	margin:auto;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+
 
 //search style
+#tfheader{
+	width:40%;
+	position: relative;
+	top: 50%;
+	right:50%;
 
+}
 #tfnewsearch{
-		float:right;
+		//float:right;
 		//padding:20px;
 	}
 
