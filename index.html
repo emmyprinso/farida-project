@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="template.css">
-
+</head>
 
 
 
@@ -14,22 +14,38 @@
 
 
 	<div id="headerAlign">
-		<img src="Logo.png" alt="logo">
-create a div and make the div have backgroung image of the logo 
-		<div id="tfheader">
-			<form id="tfnewsearch" method="get" action="http://www.google.com">
-		      	  <input type="text" class="tftextinput" name="q" size="21" maxlength="120">
-		      	  <input type="submit" value="search" class="tfbutton">
-		</form>
-		</div>
+		<img id="logo" src="Logo.png" alt="logo" width="168px" height="61">
+		<div id="search" style="border:0px solid gray;position:relative;left:30%;top:5%;border-radius:10px;width:62%;height:25px">
+			
+			<form id="searchForm" method="get" action="http://www.google.com">
+			
+			
+			<select class="searchCollection">
+					<option value="General">General</option>	
+					<option value="Laptops">Laptops</option> 
+					<option value="Desktop PC">Desktop PC</option>	
+					<option value="Accessories">Accessories</option>	
+			</select>
+			
+			
+		      	<input type="text" id="searchInput" name="search" size="25" class="searchCollection">
+		      	<input type="submit" value="SEARCH" id="searchButton" class="searchCollection">
+			</form>
+		</div> <!--End search div -->
+		
+	<button	class="searchCollection">Login</button>
+	<button	class="searchCollection">Register</button>
+	
+	
+	
+	
+	</div><!--End of header headerAlign div-->
 
-	</div>
+
+</div><!--End of headerSection div-->
 
 
-</div>
 
-
-</head>
 <body>
 
 <div id="openingNav">

@@ -1,7 +1,4 @@
-*{
-	margin:0;
-	padding:0;
-}
+
 body{
 	background-color:white;
 	font-family: sans-serif;
@@ -9,6 +6,8 @@ body{
 
 .headerArrange{ //arrange the header section
 	width:100%;
+	margin-left:auto;
+	margin-left:auto;
 }
 
 .linkFootNav{
@@ -27,28 +26,62 @@ footNav{
 #headerSection{
 	background-color: white;
 	width: 100%;
-	padding-top:5px;
-	padding-bottom:5px;
-	padding-right:10%;
-	padding-left:10%;
+	//border: 5px solid black; 
+	//padding-top:5px;
+	//padding-bottom:5px;
+	//padding-right:10%;
+	//padding-left:10%;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 #headerAlign{
+	position: relative;
 	width:80%;
-	background-color:green;
-	margin:auto;
+	height:150px;
+	background-color:white;
+	margin-left:auto;
+	margin-right:auto;
 	padding-top:10px;
 	padding-bottom:10px;
+	border:10px solid black;
+}
+#logo{
+	margin-right: 1%;
+	margin-left: 2%;
+	float:left;
+}
+//style the search div here headerSection
+
+
+//the search box and search button div
+#search{
+	//position: absolute
+	//dth: 10px;
+	//ight:100px; 	
+	left: 50%;
+	float: left;
+
+	background-color: red;
+}
+
+.searchCollection{
+	height:25px;
+	border: 5px solid #d4cdcd;
+	border-radius:10px;
 }
 
 
 
+
+/*
 //search style
 #tfheader{
-	width:40%;
 	position: relative;
-	top: 50%;
-	right:50%;
+	width:40%;
+	
+	top: 0px;
+	left:700px;
 
 }
 #tfnewsearch{
@@ -59,16 +92,24 @@ footNav{
 .tfclear{
 		clear:both;
 	}
-
-
+*/
+	
+	
+	
+	
+/*
 .tfbutton:hover {
 		text-decoration: none;
 		background: #007ead;
 		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
 		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
 	}
+*/
 
 
+
+
+/*
 .tftextinput{
 		margin: 0;
 		//padding: 5px 15px;
@@ -80,4 +121,4 @@ footNav{
 		//border-bottom-left-radius: 5% 5%;
 	}
 
-
+*/
