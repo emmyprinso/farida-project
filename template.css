@@ -33,13 +33,14 @@ footNav{
 	//padding-left:10%;
 	margin-left:auto;
 	margin-right:auto;
+	
 }
 
 #headerAlign{
 	position: relative;
 	width:80%;
 	//height:150px;
-	background-color:white;
+	background-color:#e6faff;
 	margin-left:auto;
 	margin-right:auto;
 	padding-top:10px;
@@ -124,6 +125,7 @@ footNav{
 .dropdown {
     float: left;
     overflow: hidden;
+	
 }
 
 .dropdown .dropbtn {
@@ -135,6 +137,7 @@ footNav{
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+	
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -148,6 +151,7 @@ footNav{
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+	
 }
 
 .dropdown-content a {
@@ -157,14 +161,18 @@ footNav{
     text-decoration: none;
     display: block;
     text-align: left;
+	//border: 1px groove black;
+	
 }
 
 .dropdown-content a:hover {
     background-color: #ddd;
+	border-left: 6px solid black;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+	background-color:inherit;
 }
 
 
