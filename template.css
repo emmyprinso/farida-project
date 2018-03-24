@@ -2,6 +2,7 @@
 body{
 	background-color:white;
 	font-family: sans-serif;
+	//border:#ff9900 8px solid;
 }
 
 .headerArrange{ //arrange the header section
@@ -60,8 +61,8 @@ footNav{
 	//position: absolute
 	//dth: 10px;
 	//ight:100px; 	
-	left: 50%;
-	float: left;
+	//left: 50%;
+	//float: left;
 
 	background-color: red;
 }
@@ -73,17 +74,23 @@ footNav{
 }
 
 
+.inSideSearch{
+	height:37px;
+}
+
 
 
 
 
 #slogan {
 	//float:left;
+	clear:both;
   width: 30%;
-  height: 100%;
-  position: relative;
-  left:30%;
-  top:2%;
+  height: 10%;
+  margin:auto;
+  //position: static;
+ // left:50%;
+  //top:5%;
   //background: yellow;
 }
 #myAnimation {
@@ -100,6 +107,7 @@ footNav{
 #navDiv{
 	background-color: black;
 	width: 100%;
+	float:left;
 
 }
 
@@ -186,7 +194,7 @@ footNav{
 
 //MAIN BODY THE MAIN MARKET PLACE
 #mainBody{
-
+	width:100%;
 }
 
 /*
