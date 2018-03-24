@@ -1,0 +1,45 @@
+$_SERVER["REQUEST_METHOD"] == "POST"			--this check should be done to make sure the form was submitted
+
+$name = $_REQUEST['fname'];
+
+$_POST["name of the desired input from the form"]
+
+$_GET["name of the form data"]
+
+$_SERVER["PHP_SELF"] 		this will return the same file ===I will use it when I want to return the same page
+
+
+
+---Write a test input function like this
+function test_input($data){
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}
+
+
+
+
+--use a span to indicate error and a * if required 
+<page class="err">* <?php echo $nameErr ?></span>
+
+--empty($variable)        this function will return true if the variable is empty
+
+--filter_var($email, FILTER_VALID_EMAIL) this function will return true if the email is formed correctly
+
+
+---if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+  $nameErr = "Only letters and white space allowed"; 
+}                                                      --validate user name
+
+
+
+
+--E-mail: <input type="text" name="email" value="<?php echo $email;?>">          use this method to keep the value in the te area when raising error
+
+
+
+---  <input type="submit" name="submit" value="Submit">  
+
+---<input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female              keep some values in the radio button
