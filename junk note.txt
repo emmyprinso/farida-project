@@ -43,3 +43,155 @@ function test_input($data){
 ---  <input type="submit" name="submit" value="Submit">  
 
 ---<input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female              keep some values in the radio button
+
+
+
+
+????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+//////////////////MYSQL DATA BASE///////////////////////////////////////////
+
+
+//TO CONNECT TO A MYSQL DATABASE USE THE FOLLOWING CODE 
+
+
+<?php
+	$servername = "localhost";
+	$username = "username";
+	$password = "password";
+	
+	$conn = mysqli_connect($servername, $username, $password);
+	
+	if(!$conn){
+		die("Connection Failed" . mysqli_connect_error());
+	}
+	
+	echo "Connected Successfully";
+?>
+
+
+
+//TO CLOSE A CONNECT BE FORE THE SCRIPT ENDS USE 
+$conn->close();
+	or
+mysqli_close($conn);
+
+
+
+///////////////////////	HOW TO CREATE A DATABASE/////////////
+//first establish the connection to the server
+//then create the database
+
+$servername = "localhost";
+$username = "username";
+$password = "password";
+
+$conn = mysqli_connect($servername, $username, $password);
+if(!$conn){
+	die("Connection Failed ".mysqli_connect_error);
+}
+
+
+
+
+$sql = "CREATE DATABASE farida";
+if(mysqli_query($conn, $sql)){
+	echo "Database Created Successfully";
+}else{
+	echo "Error while create database" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+
+
+//////////////////////////////////////HOW CREATE A TABLE ////////////////////////
+//FIRST CONNECT TO THE DATABASE BEDFORE CREATING THE TABLE
+$sql = "CREATE TABLE faridaCustomers(
+	id INT(6) UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	name VARCHAR(20) NOT NULL,
+	email VARCHAR(50),
+	reg_date TIMESTAMP
+	)"
+	
+if(mysqli_query($conn,$sql)){
+	echo "Table successfully created"
+}else{
+	echo "failed to create the table" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+
+
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////TO INSERT INTO A TABLE//////////////////////
+//the sql is the following form
+// INSERT INTO faridaCustomers(column1,column2,column3,...)
+//		VALUES(VALUE1,VALUe2,VALUE3,...)
+// 		the whole sql must be quoted
+//		string values must be quoted
+//		numeric value must not be quoted
+//		NULL values must not be quoted	
+
+$sql = "INSERT INTO faridaCustomers (firstname, username, email) 
+		VALUES ('emmanuel', 'emmyprinso', 'emmyprinso@gmail.com')";
+		
+if(mysqli_query($conn,$sql)){
+	echo "record successfully updated ";
+}else{
+	echo "error occured while trying to insert" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+
+
+///////////////////////////////////	TO RETRIEVE THE LAST INSERTED ID WE USE
+$last_id = mysqli_insert_id($conn);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////TO INSERT MULTIPLE RECORD AT THE SAME TIMESTAMP
+// first create the queries differently 
+// concatinate the queries into one string 
+// the execute 
+					mysqli_multi_query($conn, $sqlQuery);
+					
+					
+					
+/////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////TO FETCH THE firstname,username, password from the faridaCustomer table do the following
+// first the query should be 
+							$sql = "SELECT firstname, username, password FROM faridaCustomers";
+							$result = mysqli_query($conn, $sql);
+							
+							if(mysqli_num_rows($result) > 0){
+								while($row = mysqli_fetch_assoc($result)){
+									echo "firstname" . $row["firstname"] . "username" . $row["username"] . "password" . $row["password"]; 
+								}
+							}else{
+								echo "0 result from table";
+							}
+							
+							mysqli_close($conn);
+							
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////TO DELETE A ROW
+//			execute
+					$sql = "DELETE FROM faridaCustomers WHERE id=3";
+					if(mysqli_query($conn, $sql)){
+						echo "record deleted "
+					}else{
+						echo "failed" . mysqli_error($conn);
+					}
+					
+					
+					
+					
+					
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////// TO UPDATE 
+// $sql = "UPDATE faridaCustomers SET username='emmy' WHERE id=2";
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////	TO GRAB A SECTION OF THE TABLE
+ $sql = "SELECT * FROM faridaCustomers LIMIT 15, 5"      //this will select 5 rows starting from 16
