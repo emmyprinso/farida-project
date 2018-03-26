@@ -1,0 +1,15 @@
+#all the pages should have the configuration php 
+												which will make sure that the database is available and the tables are available
+												
+#In the configuration php check if the section has already started
+																if the section is yet to start then update section variable(Username, password and )
+																*if the section has started then take decision that relates to the section 
+																								*decision like change login to logout OR logout to login
+
+																								
+#The registration page will have a form which will be posted to the database
+																			the data will be matched to the database if there is a user with the same user name the suer will be required to re-enter 
+																			if no user exist the user will be created with personal data
+																			the user will be logged in aswell
+																			a table for the user will also be created which will store the user add to cart
+																			the user add to cart will be update by mysqli_last_id() function
