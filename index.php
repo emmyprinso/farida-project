@@ -1,12 +1,31 @@
 <?php
 include "configuration.php";
+ini_set('display_errors', false);				//REMEMBER TO RE ACTIVATE ERROR WHEN NECESSARY
+$username = NULL;
+$password = NULL;
 echo "after include";
 session_start();
 /*echo "<br><br>";
 echo $_SESSION["username"];
+
 echo "<br><br>";
 echo $_SESSION["password"];
 */
+try {
+	if ($_SESSION["username"] == NULL or $_SESSION["password"] == NULL){
+		throw new Exception("there is no password");
+	}else{
+		$username = $_SESSION["username"];
+		$password = $_SESSION["password"];	
+	}
+
+	//echo "<br>No error";
+}
+catch(Exception $e){
+	$username = NULL;
+	$password = NULL;
+	//echo "<br>Exception caught: ".$e->getMessage();
+}
 ?>
 
 
@@ -45,9 +64,25 @@ echo $_SESSION["password"];
 		      	<input type="submit" value="SEARCH" id="searchButton" class="searchCollection">
 			</form>
 		</div> <!--End search div -->
-	<div id="regButtonDiv" style="height:37px;margin:10px;float:left;">	
-	<a href="login.php"><button	class="searchCollection">Login</button></a>
+	<div id="regButtonDiv" style="height:37px;margin:10px;float:left;">
+
+<?php
+	if (username != NULL || password != NULL){
+		echo '<a href="login.php"><button	class="searchCollection">Logout</button></a>';
+	}else{
+		echo '<a href="login.php"><button	class="searchCollection">Login</button></a>';
+	}
+?>
+
+	
+	
 	<a href="registration.php"><button	class="searchCollection">Register</button></a>
+	
+	<?php
+	if (username != NULL || password != NULL){
+		echo "<br>".$username;
+	}
+	?>
 	</div><!--button div-->
 	
 
