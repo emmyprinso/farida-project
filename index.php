@@ -41,6 +41,30 @@ catch(Exception $e){
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="template.css">
 <script src="action.js"></script>
+
+<style>
+	.itemer{
+		width: 18%;
+		height: 200px;
+		background-color: black;
+		color: red;
+		border: 2px solid gray;
+		float: left;
+	}
+
+	.itemer:hover{
+		background-color: white;
+	}
+	
+	#mainBody{
+		padding: 2% 10% 0% 10%;
+		
+	}
+	
+	.nameClass{
+		
+	}
+</style>
 </head>
 
 <body onload="myMove()" style="background-color:#e6faff;">
@@ -188,6 +212,29 @@ catch(Exception $e){
 </div><!--END OF HEAD PLUS NAV SECTION-->
 
 <div id="mainBody" style="background-color:#e6faff;height:1000px;color:black;">
+
+
+<div class="itemer">
+gfddhfgjfgjjjhgjjjjjjjjjjjjjjjghjhgm
+</div>
+
+
+<div class="itemer">
+gfddhfgjfgjjjhgjjjjjjjjjjjjjjjghjhgm
+</div>
+
+<div class="itemer">
+gfddhfgjfgjjjhgjjjjjjjjjjjjjjjghjhgm
+</div>
+
+<div class="itemer">
+gfddhfgjfgjjjhgjjjjjjjjjjjjjjjghjhgm
+</div>
+
+<div class="itemer">
+gfddhfgjfgjjjhgjjjjjjjjjjjjjjjghjhgm
+</div>
+
 
 
 
