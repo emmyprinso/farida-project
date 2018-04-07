@@ -61,7 +61,7 @@ function test_input($data) {
 /////////////////////////////////////////////////CHECK IF USER IS IN THE TABLE
 function checkForUser($user, $mail){
 	$check = "noexist";		//returns noexist if there is nomatch and the table exist
-	$conn = $conn = mysqli_connect($GLOBALS["servername"], $GLOBALS["serverUserName"], $GLOBALS["serverPassword"], $GLOBALS["dbname"]);
+	$conn = mysqli_connect($GLOBALS["servername"], $GLOBALS["serverUserName"], $GLOBALS["serverPassword"], $GLOBALS["dbname"]);
 	if(!$conn){
 		die("Connection Failed ".mysqli_connect_error);
 	}else{

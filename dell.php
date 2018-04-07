@@ -43,7 +43,7 @@ catch(Exception $e){
  <link rel="stylesheet" type="text/css" href="products.css"> 
 <link rel="stylesheet" type="text/css" href="template.css">
 <script src="action.js"></script>
-<!-- <script src="slideshow.js"></script> -->
+<script src="products.js"></script>
 
 
 </head>
@@ -108,7 +108,7 @@ catch(Exception $e){
 	if(!$conn){
 		die("Connection Failed ".mysqli_connect_error);
 	}else{
-		$sql = "SELECT cart FROM $username";
+		$sql = "SELECT cartItem FROM $username";
 		$result = mysqli_query($conn, $sql);
 		//$cart = count($result);
 		if(mysqli_num_rows($result) > 0){
@@ -208,14 +208,87 @@ catch(Exception $e){
 
 <div class="productContainer">
 
+<?php
+
+	$fileName = $_SERVER['PHP_SELF'];
+	$lastToken = "";
+	$tok = strtok($fileName, "/");
+	while($tok !== false){
+		if($tok !== false){
+			$lastToken = $tok;
+		}
+		$tok = strtok("/");
+	}
+	$theFile = str_replace(".php", "", $lastToken);
+	
+$id;
+$item;
+$model;
+$displaySize;
+$screenRes;
+$processorType;
+$clockSpeed;
+$ram;
+$storage;
+$operatingSystem;
+$description;
+$price;
+$orderStatus;
+$reg_date;
+
+	
+$index = 0;
+	
+	
+	
+	$conn = $conn = mysqli_connect($GLOBALS["servername"], $GLOBALS["serverUserName"], $GLOBALS["serverPassword"], $GLOBALS["dbname"]);
+	if(!$conn){
+		die("Connection Failed ".mysqli_connect_error);
+	}else{
+		$sql = "SELECT * FROM $theFile";
+		$result = mysqli_query($conn, $sql);
+		//$cart = count($result);
+		if(mysqli_num_rows($result) > 0){
+			while($row = mysqli_fetch_assoc($result)){
+					$id[$index] = $row["id"];
+					$item[$index] = $row["item"];
+					$model[$index] = $row["model"];
+					$displaySize[$index] = $row["displaySize"];
+					$screenRes[$index] = $row["screenRes"];
+					$processorType[$index] = $row["processorType"];
+					$clockSpeed[$index] = $row["clockSpeed"];
+					$ram[$index] = $row["ram"];
+					$storage[$index] = $row["storage"];
+					$operatingSystem[$index] = $row["operatingSystem"];
+					$description[$index] = $row["description"];
+					$price[$index] = $row["price"];
+					$orderStatus[$index] = $row["orderStatus"];
+					$reg_date[$index] = $row["reg_date"];
+					++$index;
+					}
+			}
+	}
+	mysqli_close($conn);
+
+
+
+
+
+
+
+?>
+
+
 
 <div class="itemBox">
 ghghjhfgjfgj
 </div>
 
-<div class="itemBox">
-	<div class="itemImageBox">
 
+
+<div class="itemBox" onmouseover="illusion(this)">
+	<div class="itemImageBox">
+		<img src="dell\\dell1.jpg" class="image">
 	</div>
 	
 	<div class="itemDescription">
@@ -252,26 +325,6 @@ dgdfgfdg
 
 
 
-<div class="itemBox">
-	<div class="itemImageBox">
-
-	</div>
-	
-	<div class="itemDescription">
-
-	</div>
-</div>
-
-
-<div class="itemBox">
-	<div class="itemImageBox">
-
-	</div>
-	
-	<div class="itemDescription">
-
-	</div>
-</div>
 
 
 </div><!--END OF PRODUCT CONTAINER-->

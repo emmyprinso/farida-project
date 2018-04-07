@@ -108,7 +108,7 @@ catch(Exception $e){
 	if(!$conn){
 		die("Connection Failed ".mysqli_connect_error);
 	}else{
-		$sql = "SELECT cart FROM $username";
+		$sql = "SELECT cartItem FROM $username";
 		$result = mysqli_query($conn, $sql);
 		//$cart = count($result);
 		if(mysqli_num_rows($result) > 0){
