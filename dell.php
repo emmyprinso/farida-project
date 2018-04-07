@@ -40,10 +40,10 @@ catch(Exception $e){
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" type="text/css" href="slideshow.css">
+ <link rel="stylesheet" type="text/css" href="products.css"> 
 <link rel="stylesheet" type="text/css" href="template.css">
 <script src="action.js"></script>
-<script src="slideshow.js"></script>
+<!-- <script src="slideshow.js"></script> -->
 
 
 </head>
@@ -192,35 +192,92 @@ catch(Exception $e){
 
 </div><!--END OF HEAD PLUS NAV SECTION-->
 
-<div id="mainBody" style="background-color:#e6faff;height:80%;color:black;">
 
 
-<div class="sliderDiv">
-<a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+<div id="mainBody">
 
-<div class="mySlides fade">
 
-<img src="slideshow\1.jpg" id="image">
+<div class="productByClass">		
+<span><a class="arrangeBy" href="#model">model<a></span>
+<span><a class="arrangeBy" href="#price">price<a></span>
+<span><a class="arrangeBy" href="#price">price<a></span>
+</div><!--END OF SELECTING DISPLAY CATEGORY-->
 
+
+
+
+<div class="productContainer">
+
+
+<div class="itemBox">
+ghghjhfgjfgj
 </div>
 
-<a class="next" onclick="nextSlide(1)">&#10095;</a>
-</div>
+<div class="itemBox">
+	<div class="itemImageBox">
 
-<br>
+	</div>
+	
+	<div class="itemDescription">
 
-<div style="text-align:center">
-  <span class="dot" onclick="setTo(1)" id="1"></span> 
-  <span class="dot" onclick="setTo(2)" id="2"></span> 
-  <span class="dot" onclick="setTo(3)" id="3"></span> 
-  <span class="dot" onclick="setTo(4)" id="4"></span> 
-  <span class="dot" onclick="setTo(5)" id="5"></span> 
-  <span class="dot" onclick="setTo(6)" id="6"></span> 
+	</div>
 </div>
 
 
 
+
+<div class="itemBox">
+fgfdgdf
 </div>
+
+
+
+<div class="itemBox">
+dfgdfgfdh
+</div>
+
+
+<div class="itemBox">
+dgdfgfdg
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="itemBox">
+	<div class="itemImageBox">
+
+	</div>
+	
+	<div class="itemDescription">
+
+	</div>
+</div>
+
+
+<div class="itemBox">
+	<div class="itemImageBox">
+
+	</div>
+	
+	<div class="itemDescription">
+
+	</div>
+</div>
+
+
+</div><!--END OF PRODUCT CONTAINER-->
+
+
+</div><!--END OF MAINBODY-->
 
 
 

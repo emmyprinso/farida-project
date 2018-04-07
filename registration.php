@@ -68,9 +68,18 @@ if(empty($firstnameErr) and empty($lastnameErr) and empty($usernameErr) and empt
 			//CREATE A TABLE FOR THE CUSTOMER
 			$sql = "CREATE TABLE ".$username."(
 			id INT(6) UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-			cart VARCHAR(30) NOT NULL,
+			cartItem VARCHAR(30) NOT NULL,
+			model VARCHAR(30) NOT NULL,
+			displaySize VARCHAR(30) NOT NULL,
+			screenRes VARCHAR(30) NOT NULL,
+			processorType VARCHAR(30) NOT NULL,
+			clockSpeed VARCHAR(30) NOT NULL,
+			ram VARCHAR(30) NOT NULL,
+			storage VARCHAR(30) NOT NULL,
+			operatingSystem VARCHAR(30) NOT NULL,
 			description VARCHAR(60) NOT NULL,
 			price VARCHAR(10) NOT NULL,
+			orderStatus VARCHAR(10) NOT NULL,
 			reg_date TIMESTAMP
 			)";
 			if(mysqli_query($conn, $sql)){
