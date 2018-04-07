@@ -39,32 +39,13 @@ catch(Exception $e){
 <title>faridaCOM</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="slideshow.css">
 <link rel="stylesheet" type="text/css" href="template.css">
 <script src="action.js"></script>
+<script src="slideshow.js"></script>
 
-<style>
-	.itemer{
-		width: 18%;
-		height: 200px;
-		background-color: black;
-		color: red;
-		border: 2px solid gray;
-		float: left;
-	}
 
-	.itemer:hover{
-		background-color: white;
-	}
-	
-	#mainBody{
-		padding: 2% 10% 0% 10%;
-		
-	}
-	
-	.nameClass{
-		
-	}
-</style>
 </head>
 
 <body onload="myMove()" style="background-color:#e6faff;">
@@ -214,27 +195,28 @@ catch(Exception $e){
 <div id="mainBody" style="background-color:#e6faff;height:1000px;color:black;">
 
 
-<div class="itemer">
-gfddhfgjfgjjjhgjjjjjjjjjjjjjjjghjhgm
+<div class="sliderDiv">
+<a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+
+<div class="mySlides fade">
+
+<img src="slideshow\2.jpg" style="margin-left:25%; margin-right:25%;" id="image">
+
 </div>
 
-
-<div class="itemer">
-gfddhfgjfgjjjhgjjjjjjjjjjjjjjjghjhgm
+<a class="next" onclick="nextSlide(1)">&#10095;</a>
 </div>
 
-<div class="itemer">
-gfddhfgjfgjjjhgjjjjjjjjjjjjjjjghjhgm
-</div>
+<br>
 
-<div class="itemer">
-gfddhfgjfgjjjhgjjjjjjjjjjjjjjjghjhgm
+<div style="text-align:center">
+  <span class="dot" onclick="setTo(1)"></span> 
+  <span class="dot" onclick="setTo(2)"></span> 
+  <span class="dot" onclick="setTo(3)"></span> 
+   <span class="dot" onclick="setTo(4)"></span> 
+  <span class="dot" onclick="setTo(5)"></span> 
+  <span class="dot" onclick="setTo(6)"></span> 
 </div>
-
-<div class="itemer">
-gfddhfgjfgjjjhgjjjjjjjjjjjjjjjghjhgm
-</div>
-
 
 
 
@@ -250,6 +232,25 @@ gfddhfgjfgjjjhgjjjjjjjjjjjjjjjghjhgm
    <a href="#home">Home</a>
   <a href="#news">About</a>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>

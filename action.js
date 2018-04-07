@@ -1,3 +1,8 @@
+
+
+
+
+
 function myMove() {
   var elem = document.getElementById("myAnimation");   
   var pos = 0;
@@ -18,3 +23,21 @@ function myMove() {
     
   }
 }
+
+
+/*
+var slideIndex = 0;
+
+function nextSlide(var dir){
+	alert("I was called");
+	var element = document.getElementById("image");
+	slideIndex = slideIndex + dir;
+	if(slideIndex < 1){
+		slideIndex = 6;
+	}
+	else if(slideIndex > 6){
+		slideIndex = 1;
+	}
+	element.src = "slideshow\\" + slideIndex + ".jpg";
+}
+*/
