@@ -270,16 +270,37 @@ $index = 0;
 	}
 	mysqli_close($conn);
 
+//$_SERVER["REQUEST_METHOD"] == "GET"
+	
+$requestValue = $_GET['name'];
+if ($requestValue){
+	for($i=0; $i<10; ++$i){
+		echo "there is a get request : " . $requestValue. "<br>";
+	}
+}
 
+	
+	for($i=0; $i<$index; ++$i){
+		$displayHTML = '<a href="'. htmlspecialchars($_SERVER["PHP_SELF"]). "?name=" .$i. '">';
+		$displayHTML .= '<div class="itemBox" onmouseover="illusion(this)" onmouseout="illusionOut(this)">
+							<div class="itemImageBox">
+							<img src="' .$item[$i]. '" class="image">
+									</div>
+									<div class="itemDescription" align="middle">
+									<h5>' .$description[$i]. '</h5>
+									<h3 style="color:red;">' .$price[$i]. '</h3>
+									</div>
+									</div> </a>';
 
-
+		echo $displayHTML;							
+		}
 
 
 
 ?>
 
 
-
+<!--
 <div class="itemBox" onmouseover="illusion(this)" onmouseout="illusionOut(this)">
 	<div class="itemImageBox">
 		<img src="dell\\dell6.jpg" class="image">
@@ -322,7 +343,7 @@ dfgdfgfdh
 dgdfgfdg
 </div>
 
-
+-->
 
 
 
