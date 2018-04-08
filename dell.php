@@ -280,13 +280,21 @@ $index = 0;
 
 
 
-<div class="itemBox">
-ghghjhfgjfgj
+<div class="itemBox" onmouseover="illusion(this)" onmouseout="illusionOut(this)">
+	<div class="itemImageBox">
+		<img src="dell\\dell6.jpg" class="image">
+	</div>
+	
+	<div class="itemDescription" align="middle">
+	<h5>the description of the pc or accessory will appear hear</h5>
+	<h3 style="color:red;">$400</h3>
+
+	</div>
 </div>
 
 
 
-<div class="itemBox" onmouseover="illusion(this)">
+<div class="itemBox" onmouseover="illusion(this)" onmouseout="illusionOut(this)">
 	<div class="itemImageBox">
 		<img src="dell\\dell1.jpg" class="image">
 	</div>

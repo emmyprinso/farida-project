@@ -55,6 +55,8 @@
 .itemDescription{
 	width: 100%;
 	height: 100px;
+	margin-top: 0px;
+	margin-bottom: 1px;
 	border: 0px;
 }
 
