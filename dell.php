@@ -30,6 +30,26 @@ catch(Exception $e){
 	$password = NULL;
 	//echo "<br>Exception caught: ".$e->getMessage();
 }
+
+
+
+/////////////////////////////////////////////////////////////VARIABLES TO UPDATE ITEMS/////////////////////////////
+$id;
+$item;
+$model;
+$displaySize;
+$screenRes;
+$processorType;
+$clockSpeed;
+$ram;
+$storage;
+$operatingSystem;
+$description;
+$price;
+$orderStatus;
+$reg_date;
+
+$index = 0;
 ?>
 
 
@@ -160,16 +180,18 @@ catch(Exception $e){
 <div id="navDiv" style="background-color:black;">
 
 <div class="navbar" style="height:45px;background-color:black;">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
+  <a href="index.php">Home</a>
+  <a href="about.php">About</a>
+  <a href="contact.php">Contact</a>
   <div class="dropdown">
     <button class="dropbtn">Categories 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      <a href="dell.php">Dell</a>
+      <a href="lenovo.php">lenovo</a>
+      <a href="acer.php">acer</a>
+      <a href="hp.php">hp</a>
     </div>
   </div> 
   
@@ -179,9 +201,9 @@ catch(Exception $e){
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+        <a href="mouse.php">mouse</a>
+      <a href="board.php">keyboard</a>
+      <a href="charger.php">charger</a>
     </div>
   </div>   
 
@@ -210,6 +232,20 @@ catch(Exception $e){
 
 <?php
 
+
+//$_SERVER["REQUEST_METHOD"] == "GET"
+/*	
+$requestValue = $_GET['goods'];
+if (is_numeric($requestValue)){
+	for($i=0; $i<10; ++$i){
+		echo "there is a get request : " . $requestValue. "<br>";
+	}
+}
+
+else{*/
+	
+	
+	
 	$fileName = $_SERVER['PHP_SELF'];
 	$lastToken = "";
 	$tok = strtok($fileName, "/");
@@ -221,23 +257,8 @@ catch(Exception $e){
 	}
 	$theFile = str_replace(".php", "", $lastToken);
 	
-$id;
-$item;
-$model;
-$displaySize;
-$screenRes;
-$processorType;
-$clockSpeed;
-$ram;
-$storage;
-$operatingSystem;
-$description;
-$price;
-$orderStatus;
-$reg_date;
-
 	
-$index = 0;
+
 	
 	
 	
@@ -270,32 +291,26 @@ $index = 0;
 	}
 	mysqli_close($conn);
 
-//$_SERVER["REQUEST_METHOD"] == "GET"
-	
-$requestValue = $_GET['name'];
-if ($requestValue){
-	for($i=0; $i<10; ++$i){
-		echo "there is a get request : " . $requestValue. "<br>";
-	}
-}
+
 
 	
 	for($i=0; $i<$index; ++$i){
-		$displayHTML = '<a href="'. htmlspecialchars($_SERVER["PHP_SELF"]). "?name=" .$i. '">';
+		//$displayHTML = '<a href="'. htmlspecialchars($_SERVER["PHP_SELF"]). "/?goods=" .$i. '">';
+		$displayHTML = '<a href="itemConnect.php?goods=' .$i. '&fileTable='. $theFile. '">';
 		$displayHTML .= '<div class="itemBox" onmouseover="illusion(this)" onmouseout="illusionOut(this)">
 							<div class="itemImageBox">
 							<img src="' .$item[$i]. '" class="image">
 									</div>
 									<div class="itemDescription" align="middle">
-									<h5>' .$description[$i]. '</h5>
-									<h3 style="color:red;">' .$price[$i]. '</h3>
+									' .$description[$i]. '<br>
+									<h4 style="color:red;">' .$price[$i]. '</h4>
 									</div>
 									</div> </a>';
 
 		echo $displayHTML;							
 		}
 
-
+//	} //End of the items section
 
 ?>
 
@@ -370,6 +385,7 @@ dgdfgfdg
 <div class="navbar" style="background-color:black; height:45px;margin-left:0%;padding-left:45%;">
    <a href="#home">Home</a>
   <a href="#news">About</a>
+
 </div>
 
 

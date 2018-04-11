@@ -77,7 +77,7 @@ if(empty($firstnameErr) and empty($lastnameErr) and empty($usernameErr) and empt
 			ram VARCHAR(30) NOT NULL,
 			storage VARCHAR(30) NOT NULL,
 			operatingSystem VARCHAR(30) NOT NULL,
-			description VARCHAR(60) NOT NULL,
+			description VARCHAR(120) NOT NULL,
 			price VARCHAR(10) NOT NULL,
 			orderStatus VARCHAR(10) NOT NULL,
 			reg_date TIMESTAMP
@@ -196,9 +196,26 @@ function checkForUser($user, $mail){
 		      	<input type="submit" value="SEARCH" id="searchButton" class="searchCollection">
 			</form>
 		</div> <!--End search div -->
-	<div id="regButtonDiv" style="height:37px;margin:10px;float:left;">	
-	<button	class="searchCollection">Login</button>
+	
+	<div id="regButtonDiv" style="height:37px;margin:10px;float:left;">
+
+<?php
+	if ($username != NULL || $password != NULL){
+		echo '<a href="logout.php"><button	class="searchCollection">Logout</button></a>';
+	}else{
+		echo '<a href="login.php"><button	class="searchCollection">Login</button></a>';
+	}
+?>
+
+	
+	
 	<a href="registration.php"><button	class="searchCollection">Register</button></a>
+	
+	<?php
+	if ($username != NULL || $password != NULL){
+		echo "<br>".$username;
+	}
+	?>
 	</div><!--button div-->
 	
 
@@ -231,16 +248,18 @@ function checkForUser($user, $mail){
 <div id="navDiv" style="background-color:black;">
 
 <div class="navbar" style="height:45px;background-color:black;">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
+  <a href="index.php">Home</a>
+  <a href="about.php">About</a>
+  <a href="contact.php">Contact</a>
   <div class="dropdown">
     <button class="dropbtn">Categories 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      <a href="dell.php">Dell</a>
+      <a href="lenovo.php">lenovo</a>
+      <a href="acer.php">acer</a>
+      <a href="hp.php">hp</a>
     </div>
   </div> 
   
@@ -250,9 +269,9 @@ function checkForUser($user, $mail){
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+        <a href="mouse.php">mouse</a>
+      <a href="board.php">keyboard</a>
+      <a href="charger.php">charger</a>
     </div>
   </div>   
 

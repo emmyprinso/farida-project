@@ -160,16 +160,18 @@ catch(Exception $e){
 <div id="navDiv" style="background-color:black;">
 
 <div class="navbar" style="height:45px;background-color:black;">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
+  <a href="index.php">Home</a>
+  <a href="about.php">About</a>
+  <a href="contact.php">Contact</a>
   <div class="dropdown">
     <button class="dropbtn">Categories 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      <a href="dell.php">Dell</a>
+      <a href="lenovo.php">lenovo</a>
+      <a href="acer.php">acer</a>
+      <a href="hp.php">hp</a>
     </div>
   </div> 
   
@@ -179,9 +181,9 @@ catch(Exception $e){
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      <a href="mouse.php">mouse</a>
+      <a href="board.php">keyboard</a>
+      <a href="charger.php">charger</a>
     </div>
   </div>   
 
