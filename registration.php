@@ -270,7 +270,7 @@ function checkForUser($user, $mail){
     </button>
     <div class="dropdown-content">
         <a href="mouse.php">mouse</a>
-      <a href="board.php">keyboard</a>
+      <a href="keyboard.php">keyboard</a>
       <a href="charger.php">charger</a>
     </div>
   </div>   

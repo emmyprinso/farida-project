@@ -76,13 +76,16 @@ $index = 0;
 
 	<div id="headerAlign">
 		<img id="logo" src="Logo.png" alt="logo" width="168px" height="61">
+
+		
+		
 		<div id="search" style="border:0px solid gray;border-radius:10px;width:62%;height:37px;float:left;margin-bottom:1px;margin-right:1px;">
 			
-			<form id="searchForm" method="get" action="http://www.google.com">
+			<form id="searchForm" method="post" action="searchEngine.php">
 			
 			
-			<select class="searchCollection">
-					<option value="General">General</option>	
+			<select name="options" class="searchCollection">
+					<option value="General">General</option>
 					<option value="Laptops">Laptops</option> 
 					<option value="Desktop PC">Desktop PC</option>	
 					<option value="Accessories">Accessories</option>	
@@ -120,6 +123,9 @@ $index = 0;
 	
 	
 
+
+	
+<a href="cart.php">
 
 	<?php
 	$cart = 0;
@@ -161,7 +167,9 @@ $index = 0;
 				<path d="M224.06,487.171c-29.991,0-54.734,24.743-54.734,54.734c0,29.991,24.743,54.734,54.734,54.734     s54.734-24.743,54.734-54.734C278.794,511.914,254.051,487.171,224.06,487.171z M224.06,571.896     c-16.995,0-29.991-14.371-29.991-29.991c0-16.995,14.371-29.991,29.991-29.991s29.991,12.996,29.991,29.991     C254.051,558.9,239.68,571.896,224.06,571.896z" fill="#dc4e04"/>
 			</g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
 		</svg>
-	
+		
+		
+</a>		
 		<div id ="myAnimation">BUY BEST QUALITY</div>
 	</div> <!--End slogan div -->
 	
@@ -202,7 +210,7 @@ $index = 0;
     </button>
     <div class="dropdown-content">
         <a href="mouse.php">mouse</a>
-      <a href="board.php">keyboard</a>
+      <a href="keyboard.php">keyboard</a>
       <a href="charger.php">charger</a>
     </div>
   </div>   
